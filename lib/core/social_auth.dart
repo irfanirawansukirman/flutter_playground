@@ -14,19 +14,14 @@ class SocialAuth {
     try {
       final googleSignIn = GoogleSignIn();
 
-      // Trigger the authentication flow
       final googleUser = await googleSignIn.signIn();
-
-      // Obtain the auth details from the request
       final googleAuth = await googleUser?.authentication;
 
-      // Create a new credential
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth?.accessToken,
         idToken: googleAuth?.idToken,
       );
 
-      // Once signed in, return the UserCredential
       final userCredential =
           await FirebaseAuth.instance.signInWithCredential(credential);
 
@@ -47,14 +42,11 @@ class SocialAuth {
     required Function(UserCredential) onSuccess,
   }) async {
     try {
-      // Trigger the sign-in flow
       final loginResult = await FacebookAuth.instance.login();
 
-      // Create a credential from the access token
       final facebookAuthCredential =
           FacebookAuthProvider.credential(loginResult.accessToken?.token ?? "");
 
-      // Once signed in, return the UserCredential
       final userCredential = await FirebaseAuth.instance
           .signInWithCredential(facebookAuthCredential);
 
