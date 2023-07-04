@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playgorund/screen/google_maps/default_maps.dart';
+import 'package:flutter_playgorund/screen/google_maps/two_point_line_screen.dart';
 import 'package:flutter_playgorund/widget/button.dart';
 
 class Maps extends StatelessWidget {
@@ -29,7 +30,12 @@ class Maps extends StatelessWidget {
             Button(
               title: "Draw Two Points on Maps",
               onClick: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const TwoPointLineScreen(),
+                  ),
+                );
               },
             ),
           ],

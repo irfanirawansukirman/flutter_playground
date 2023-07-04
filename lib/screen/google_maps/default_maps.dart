@@ -96,6 +96,7 @@ class _DefaultMapsState extends State<DefaultMaps> {
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
           target: _initialLocation,
+          zoom: 15.0,
         ),
         mapType: MapType.normal,
         onMapCreated: (googleMapController) => _onMapCreated(

@@ -7,7 +7,7 @@ class Button extends StatelessWidget {
   final String title;
   final VoidCallback onClick;
 
-  const Button({
+   Button({
     super.key,
     this.social,
     required this.title,
