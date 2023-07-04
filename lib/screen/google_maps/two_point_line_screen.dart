@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_playgorund/core/secret.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
@@ -21,7 +22,6 @@ class _TwoPointLineScreenState extends State<TwoPointLineScreen> {
   final Map<PolylineId, Polyline> polylines = {};
   final List<LatLng> polylineCoordinates = [];
   final polylinePoints = PolylinePoints();
-  final mapAPIKey = "YOUR_API_KEY";
 
   @override
   void initState() {
