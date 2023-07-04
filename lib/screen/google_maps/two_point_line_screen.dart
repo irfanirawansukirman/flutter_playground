@@ -21,7 +21,7 @@ class _TwoPointLineScreenState extends State<TwoPointLineScreen> {
   final Map<PolylineId, Polyline> polylines = {};
   final List<LatLng> polylineCoordinates = [];
   final polylinePoints = PolylinePoints();
-  final mapAPIKey = "AIzaSyDLmz3fVoMYXHh_K2lLS51y3pAajcT1hxU";
+  final mapAPIKey = "YOUR_API_KEY";
 
   @override
   void initState() {
